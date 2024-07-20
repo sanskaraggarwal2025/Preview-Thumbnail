@@ -14,7 +14,7 @@ A React component that displays a thumbnail preview when hovering over the progr
 - After extracting thumbnails, create a sprite sheet using ImageMagick
 -  ```montage thumbnail-*.png -tile x1 -geometry +0+0 sprite.png```
 
--  
+  
 ![Screenshot from 2024-07-20 11-37-16](https://github.com/user-attachments/assets/34e8f1a9-830c-4614-92b8-9d3f3119be6b)
 
 
