@@ -1,0 +1,24 @@
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.thumbnail-preview {
+  position: absolute;
+  bottom: 110%; 
+  left: 0;
+  transform: translateY(-10%); 
+  background-size: cover;
+  pointer-events: none; 
+  transition: opacity 0.3s;
+  display: none;
+  width: 120px; 
+  height: 68px; 
+}
+
+
+
