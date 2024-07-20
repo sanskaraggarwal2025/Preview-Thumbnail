@@ -12,6 +12,7 @@
   bottom: 110%; 
   left: 0;
   transform: translateY(-10%); 
+  border:1px white solid;
   background-size: cover;
   pointer-events: none; 
   transition: opacity 0.3s;

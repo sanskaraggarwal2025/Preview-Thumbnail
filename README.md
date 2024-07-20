@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# ThumbnailPreview Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React component that displays a thumbnail preview when hovering over the progress bar of a video. This component uses a sprite sheet to show different thumbnails at different times in the video.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Shows thumbnail previews when hovering over the video progress bar.
+- Automatically aligns thumbnails based on hover position.
+- Ensures efficient loading and display of thumbnails using a sprite sheet.
 
-## Expanding the ESLint configuration
+## Other Libraries
+- Used FFmpeg to extract thumbnails at regular intervals.
+- ```ffmpeg -i Video.mp4 -vf "fps=1/10" thumbnail-%03d.png```
+- After extracting thumbnails, create a sprite sheet using ImageMagick
+- ```montage thumbnail-*.png -tile x1 -geometry +0+0 sprite.png```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
